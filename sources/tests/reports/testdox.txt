@@ -1,0 +1,23 @@
+FinancaPessoalEntityUser
+ [x] Class exists
+ [x] If method to array exists
+ [x] If to array is returning an array
+ [x] If to array is returning valid array
+ [x] If password hash was applied
+ [x] Set data andverify integrity
+
+FinancaPessoalFilterFormataMoeda
+ [x] If class exists
+ [x] If method brl para float exists
+ [x] Filter brl para float
+ [x] If method float pata brl exists
+ [x] Filter float para brl
+
+FinancaPessoalServiceUser
+ [x] Class exists
+ [x] Method construct exists
+ [x] If method save exists
+ [x] If save is working properly
+ [x] If method delete exists
+ [x] If is returning true on delete
+

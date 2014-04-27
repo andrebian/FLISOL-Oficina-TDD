@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- O atributo colors serve para que tenhamos um visual mais fácil de entender -->
+
+<!-- O atributo bootstrap carrega as configurações iniciais -->
+<phpunit colors="true" bootstrap="bootstrap.php">
+    
+    <!-- Indicando qual é o diretório onde as classes de teste se encontram -->
+    <testsuites>
+        <testsuite name="FinancaPessoal Suite">
+            <directory suffix=".php">src/</directory>
+        </testsuite>
+    </testsuites>
+ 
+<!-- Adicionando filtros, basicamente whitelist (diretórios que serão executados), 
+    dentro temos o exclude (diretórios que não serão executados pelos testes) -->
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../src/</directory>
+            <exclude>
+                <directory suffix=".php">./vendor/</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <groups>
+        <include>
+            <group>Service</group>
+            <group>Entity</group>
+            <group>Filter</group>
+        </include>
+    </groups>
+    <logging>
+        <log type="coverage-html" target="reports/coverage-html" charset="UTF-8" yui="true" highlight="true" lowUpperBound="35" highLowerBound="70" />
+        <!--<log type="testdox-text" target="reports/testdox.txt"/>-->
+    </logging>
+</phpunit> 
